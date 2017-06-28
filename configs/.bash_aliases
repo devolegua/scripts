@@ -3,8 +3,7 @@ shopt -s expand_aliases
 alias l='less -R'
 
 alias ls="ls -F --color=auto --group-directories-first"
-alias L="ls -lhX"
-alias Ll="L | l"
+alias ll="ls -lhX"
 
 alias grep='grep --color'
 alias Pgrep='grep -P '
@@ -23,18 +22,14 @@ alias info='info --vi-keys'
 alias snode='node --use_strict --throw-deprecation'
 alias onode='node --trace_opt --trace_deopt --allow-natives-syntax'
 
-alias log_nginx='tail /var/log/nginx/access.log |  nginx_acces_log_filter | column -t'
-
-alias tokei='tokei -s code'
-
 #git
 alias git="LC_ALL=C git"
 alias count_lines="git ls-files | xargs cat | wc -l"
 alias cmt="git aa && git st && git cm -m" 
 
-alias untar='tar -xzvf'
-
 #tmux
+alias Ta='tmux a -t'
+alias Tn='tmux new -s $(basename $(pwd))'
 alias Tmv='tmux splitw -h -p'
 alias Tms='tmux splitw -v -p'
 
@@ -50,12 +45,6 @@ alias to600='xrandr --output LVDS1 --panning "1024x600" --scale "1x1"'
 
 #screenshot
 alias Scr='sleep 1; xwd -root | xwdtopnm | pnmtopng > "`date`.png"'
-
-#packages
-alias packs='sudo dpkg-query -l'
-
-#unzip zip rar unrar
-#unzip -j file.zip -d directory
 
 alias alsamixer='alsamixer -V all -c 0'
 
