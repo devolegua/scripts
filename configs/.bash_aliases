@@ -37,7 +37,7 @@ alias untar='tar -xzvf'
 #tmux
 alias t='tmux'
 alias Tnp='tmux new -s $(basename $PWD)'
-alias Trw='tmux rename-window $(basename $PWD)'
+alias Tv='tmux rename-window $(basename $PWD); nvim'
 alias Tk='tmux kill-session'
 
 alias susp='sudo ck-launch-session dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
