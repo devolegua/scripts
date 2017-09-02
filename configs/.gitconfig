@@ -1,5 +1,5 @@
 [user]
-	name = olegabyst
+	name = Oleg Tsyba
 	email = oleg.tsyba.ua@gmail.com
 [core]
 	editor = vim
@@ -8,14 +8,21 @@
 [color]
 	ui = auto
 [alias]
-	l = log --oneline --decorate --graph --all
+  devs = shortlog -sen
+  hide = stash -u
+	l = log --oneline --decorate --graph
+	la = log --oneline --decorate --graph --all
+	ll = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph
+	lg = log -E -i --grep
 	s = status -sb
 	st = status
 	aa = add .
 	cm = commit
+	cma = commit --amend --no-edit
 	co = checkout
 	br = branch
 	rt = remote
+  autorebase = rebase --interactive --autosquash
 
 [push]
 	default = simple
