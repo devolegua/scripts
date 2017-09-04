@@ -8,6 +8,9 @@ alias ll="ls -lhX"
 alias grep='grep --color'
 alias Pgrep='grep -P '
 
+alias d='docker'
+alias D='docker-compose'
+
 # C=color F=format L=level A=ansi-lines s=size h=human
 alias tree='tree -CF --dirsfirst'
 alias t2='tree -L 2'
