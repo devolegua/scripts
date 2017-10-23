@@ -1,6 +1,6 @@
 export TERM=xterm-256color
 
-export PATH="$HOME/.yarn/bin"
+export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
