@@ -31,9 +31,8 @@ alias log_nginx='tail /var/log/nginx/access.log |  nginx_acces_log_filter | colu
 alias tokei='tokei -s code'
 
 #git
-alias git="LC_ALL=C git"
 alias count_lines="git ls-files | xargs cat | wc -l"
-alias cmt="git aa && git st && git cm -m" 
+alias cmt="git aa && git s && git cm -m"
 
 alias untar='tar -xzvf'
 
@@ -61,7 +60,7 @@ alias to768='xrandr --output LVDS1 --panning "1024x768" --scale "1x1.28"'
 alias to600='xrandr --output LVDS1 --panning "1024x600" --scale "1x1"'
 
 #screenshot
-alias Scr='sleep 1; xwd -root | xwdtopnm | pnmtopng > "`date`.png"'
+alias Scr='sleep 2; xwd -root | xwdtopnm | pnmtopng > "`date`.png"'
 
 #packages
 alias packs='sudo dpkg-query -l'
