@@ -1,0 +1,9 @@
+[package]
+name = "scripts"
+version = "0.1.0"
+authors = ["Oleg Tsyba <oleg.tsyba.ua@gmail.com>"]
+
+[dependencies]
+
+rust-crypto = "0.2.*"
+base64 = "0.*"
