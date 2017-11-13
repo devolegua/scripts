@@ -4,21 +4,25 @@ extern crate crypto;
 extern crate base64;
 
 //use std::process::{Command, Stdio};
-use std::io::{Read, Write};
+use std::io::{self, Write};
 use crypto::sha1::Sha1;
 use crypto::digest::Digest;
 
 
 fn main() {
-    let mut data = String::new();
-    std::io::stdin().read_to_string(&mut data).expect("can't read to string");
+    let data = std::env::args().nth(1).expect("You need pass command arg");
+    //let mut data = String::new();
+    //io::stdin()
+    //    .read_to_string(&mut data)
+    //    .expect("can't read to string");
+
     let mut s1 = Sha1::new();
     s1.input_str(&data);
     let size = s1.output_bytes();
     
-    let mut vec: Vec<u8> = Vec::with_capacity(size);
+    let mut vec = Vec::with_capacity(size);
     vec.resize(20, 0);
-    let mut bytes: Box<[u8]> = vec.into_boxed_slice();
+    let mut bytes = vec.into_boxed_slice();
     s1.result(&mut bytes);
 
     let mut result = base64::encode(&bytes);
@@ -26,7 +30,9 @@ fn main() {
     result.retain(|ch| ch != '+' && ch != '\\' && ch != '=');
     result.truncate(16);
 
-    println!("{}", result);
+    io::stdout()
+        .write_all(result.as_bytes())
+        .expect("Can't write to stdout");
 
     //let encode = Command::new("openssl")
     //    .arg("dgst")
@@ -51,5 +57,5 @@ fn main() {
     //    .spawn()
     //    .expect("Can't start `sed`")
     //    .wait()
-    //    .expect("Can't wait `sed`");
+    //    .expect("Can't wait fucking `sed`");
 }
