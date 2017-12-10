@@ -6,7 +6,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
 [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && . ${HOME}/.nix-profile/etc/profile.d/nix.sh
 
-export BROWSER='/usr/bin/chromium'
+export BROWSER='/usr/bin/firefox'
 export EDITOR='/usr/bin/vim'
 
 #export CLOUDSDK_COMPUTE_ZONE=europe-west3-a
@@ -15,6 +15,8 @@ export EDITOR='/usr/bin/vim'
 if [ -f "$HOME/.bashrc" ]; then
   . "$HOME/.bashrc"
 fi
+
+set -o pipefail
 
 function K {
   echo $1 | festival --tts
