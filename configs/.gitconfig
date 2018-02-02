@@ -10,12 +10,13 @@
 [alias]
 	devs = shortlog -sen
 	hide = stash -u
-	l = log --oneline --decorate --graph
-	ln = log --oneline --decorate --graph --name-status
 	la = log --oneline --decorate --graph --all
-	ll = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph
-	lg = log -E -i --grep
-	llg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -E -i --grep
+	l = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -13
+	lf = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph
+	lp = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -p
+	ln = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph --name-status
+	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -E -i --grep
+	llg = log -E -i --grep
 	s = status -sb
 	st = status
 	aa = add .

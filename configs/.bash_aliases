@@ -31,8 +31,9 @@ alias log_nginx='tail /var/log/nginx/access.log |  nginx_acces_log_filter | colu
 alias tokei='tokei -s code'
 
 #git
+alias g="git"
 alias count_lines="git ls-files | xargs cat | wc -l"
-alias cmt="git aa && git s && git cm -m"
+alias cmt="git aa && git s && git cm -m" 
 
 alias untar='tar -xzvf'
 
