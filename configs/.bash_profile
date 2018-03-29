@@ -1,9 +1,9 @@
 export TERM=xterm-256color
 
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.npm/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && . ${HOME}/.nix-profile/etc/profile.d/nix.sh
 
 export BROWSER='/usr/bin/firefox'
