@@ -11,20 +11,15 @@
 	devs = shortlog -sen
 	hide = stash -u
 	la = log --oneline --decorate --graph --all
-	l = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -16
+	l = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -13
 	lf = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph
-	lp = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -p
 	ln = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph --name-status
 	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -E -i --grep
 	llg = log -E -i --grep
 	s = status -sb
 	st = status
 	aa = add .
-	cm = commit
 	cma = commit --amend --no-edit
-	co = checkout
-	br = branch
-	rt = remote
 
 [push]
 	default = simple
