@@ -16,6 +16,7 @@
 	ln = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph --name-status
 	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -E -i --grep
 	llg = log -E -i --grep
+	loc = log --branches --not --remotes
 	s = status -sb
 	st = status
 	aa = add .
