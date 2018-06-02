@@ -21,3 +21,6 @@ set -o pipefail
 function K {
   echo $1 | festival --tts
 }
+
+# OPAM configuration
+. /home/oleg/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
