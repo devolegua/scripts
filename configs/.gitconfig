@@ -12,6 +12,7 @@
 	hide = stash -u
 	la = log --oneline --decorate --graph --all
 	l = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -13
+	ld = log --pretty=format:'%C(yellow)%h%C(reset) - %aE [%C(green)%aD%C(reset)] %s' --graph
 	lf = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph
 	ln = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph --name-status
 	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -E -i --grep
