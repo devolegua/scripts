@@ -12,7 +12,7 @@ alias tree='tree -CF --dirsfirst'
 #alias t2='tree -L 2'
 alias t2="exa --group-directories-first -lb --git --git-ignore -TL 2"
 #alias t3='tree -L 3'
-alias t2="exa --group-directories-first -lb --git --git-ignore -TL 3"
+alias t3="exa --group-directories-first -lb --git --git-ignore -TL 3"
 alias t2l='t2 | l'
 alias t3l='t3 | l'
 
