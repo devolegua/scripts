@@ -6,8 +6,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ] && . ${HOME}/.nix-profile/etc/profile.d/nix.sh
 
-export BROWSER='/usr/bin/firefox'
-export EDITOR='/usr/bin/vim'
+export BROWSER='firefox'
+export EDITOR='vi'
+export PAGER='less'
 
 #export CLOUDSDK_COMPUTE_ZONE=europe-west3-a
 #export CLOUDSDK_COMPUTE_REGION=europe-west3
@@ -23,4 +24,4 @@ function K {
 }
 
 # OPAM configuration
-. /home/oleg/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+. $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

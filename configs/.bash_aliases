@@ -1,7 +1,5 @@
 shopt -s expand_aliases
 
-alias l='less -R'
-
 #alias ls="ls -F --color --group-directories-first"
 alias ls="exa --group-directories-first"
 #alias ll="ls -lhX"
@@ -13,15 +11,6 @@ alias tree='tree -CF --dirsfirst'
 alias t2="exa --group-directories-first -lb --git --git-ignore -TL 2"
 #alias t3='tree -L 3'
 alias t3="exa --group-directories-first -lb --git --git-ignore -TL 3"
-alias t2l='t2 | l'
-alias t3l='t3 | l'
-
-alias grep='grep --color'
-alias Pgrep='grep -P '
-
-alias d='docker'
-alias D='docker-compose'
-
 
 alias pal='pal -c 10'
 alias ncal='ncal -M3'
@@ -31,13 +20,11 @@ alias info='info --vi-keys'
 alias snode='node --use_strict --throw-deprecation'
 alias onode='node --trace_opt --trace_deopt --allow-natives-syntax'
 
-alias log_nginx='tail /var/log/nginx/access.log |  nginx_acces_log_filter | column -t'
-
 alias tokei='tokei -s code'
 
 #git
 alias count_lines="git ls-files | xargs cat | wc -l"
-alias cmt="git aa && git s && git cm -m" 
+alias cmt="git aa && git s && git commit -m" 
 
 #tmux
 alias Tnp='tmux new -s $(basename $PWD)'
