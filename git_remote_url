@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git rt -v | \
+git remote -v | \
 cut -d ' ' -f 1 | \
 sed -r "s/^origin\tgit@github\.com:(.+)\.git$/github\.com\/\1/g" | \
 head -n 1 | \
