@@ -9,12 +9,11 @@
 	ui = auto
 [alias]
 	devs = shortlog -sen
-	hide = stash -u
 	la = log --oneline --decorate --graph --all
-	ld = log --pretty=format:'%C(yellow)%h%C(reset) - %aE [%C(green)%aD%C(reset)] %s' --decorate
-	ll = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --decorate
-	ls = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --decorate -13
-	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' --graph -E -i --grep
+	ld = log --pretty=format:'%C(yellow)%h%C(reset) - %aE [%C(green)%aI%C(reset)] %s%C(red)%d%C(reset)'
+	ll = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s%C(red)%d%C(reset)'
+	ls = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s%C(red)%d%C(reset)' -13
+	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' -E -i --grep
 	loc = log --branches --not --remotes
 	s = status -sb
 	cma = commit --amend --no-edit
@@ -28,3 +27,4 @@
 	prompt = false
 [rebase]
 	autosquash = true
+	interactive = true
