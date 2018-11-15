@@ -4,6 +4,7 @@ export PATH="$HOME/.npm/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 export BROWSER='firefox'
 export EDITOR='vi'
