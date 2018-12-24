@@ -28,7 +28,7 @@ alias cmt="git aa && git s && git commit -m"
 
 #tmux
 alias Tnp='tmux new -s $(basename $PWD)'
-alias Tv='tmux rename-window $(basename $PWD); nvim'
+alias Tv='tmux rename-window $(basename $PWD); vi'
 alias Tk='tmux kill-session'
 
 alias susp='sudo ck-launch-session dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
