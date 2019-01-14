@@ -4,11 +4,10 @@ SESSION=`basename $PWD`
 
 echo "create tmux session: $SESSION"
 
-tmux -2 new-session -d -s $SESSION -c $PWD
+tmux -2 new-session -d -s $SESSION -c $PWD -n 'root'
+
 tmux split-window -t $SESSION:0 -c $PWD -h
 tmux select-pane -t $SESSION:0.0
-
-tmux setw -g monitor-activity off
 
 tmux new-window -t $SESSION -c $PWD -n 'run/logs'
 tmux split-window -t $SESSION:1 -c $PWD -h
@@ -21,6 +20,12 @@ for i in `seq 4 9`; do
   tmux split-window -t $SESSION:$i -c $PWD -h
   tmux select-pane -t $SESSION:$i.0
 done
+
+tmux select-window -t $SESSION:0
+
+tmux -2 attach-session -t $SESSION
+
+#tmux set-option -t $SESSION monitor-activity on
 
 #tmux new-window -t $SESSION:1 -n 'Logs'
 #tmux select-pane -t 0

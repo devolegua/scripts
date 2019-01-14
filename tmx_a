@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SESSION=$1
+SESSION='A'
 
 tmux -2 new-session -d -s $SESSION -c ~
 tmux split-window -t $SESSION:0 -c ~ -h
@@ -11,6 +11,13 @@ for i in `seq 1 9`; do
   tmux split-window -t $SESSION:$i -c ~ -h
   tmux select-pane -t $SESSION:$i.0
 done
+
+tmux select-window -t $SESSION:0
+
+tmux set-options -w -g monitor-activity on
+
+tmux -2 attach-session -t $SESSION
+
 
 #tmux new-window -t $SESSION:1 -n 'Logs'
 #tmux select-pane -t 0
