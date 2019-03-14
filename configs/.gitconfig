@@ -16,7 +16,6 @@
 	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' -E -i --grep
 	loc = log --branches --not --remotes
 	s = status -sb
-	cma = commit --amend --no-edit
 
 [push]
 	default = simple

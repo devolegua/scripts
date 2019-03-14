@@ -17,9 +17,9 @@ tmux new-window -t $SESSION -c $PWD -n 'back'
 
 for i in `seq 4 9`; do
   tmux new-window -t $SESSION -c $PWD
-  tmux split-window -t $SESSION:$i -c $PWD -h
-  tmux select-pane -t $SESSION:$i.0
-  sleep 0.25
+# tmux split-window -t $SESSION:$i -c $PWD -h
+# tmux select-pane -t $SESSION:$i.0
+  sleep 0.2
 done
 
 tmux select-window -t $SESSION:0
