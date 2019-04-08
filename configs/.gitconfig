@@ -10,10 +10,10 @@
 [alias]
 	devs = shortlog -sen
 	la = log --oneline --decorate --graph --all
-	ld = log --pretty=format:'%C(yellow)%h%C(reset) - %aE [%C(green)%aI%C(reset)] %s%C(red)%d%C(reset)'
-	ll = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s%C(red)%d%C(reset)'
-	ls = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s%C(red)%d%C(reset)' -13
-	lg = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s' -E -i --grep
+	ld = log --pretty=format:'%C(yellow)%h%C(reset) %s%C(red)%d%C(reset)%n%C(cyan)a%C(reset) %C(blue)%ae%C(reset) %C(green)%ai%C(reset)%n%C(cyan)c%C(reset) %C(blue)%ce%C(reset) %C(green)%ci%C(reset)%n' --graph
+	ll = log --pretty=format:'%C(yellow)%h%C(reset) %s%C(red)%d%C(reset)%n%C(cyan)a%C(reset) %C(blue)%an%C(reset) %C(green)%ar%C(reset)%n%C(cyan)c%C(reset) %C(blue)%cn%C(reset) %C(green)%cr%C(reset)%n' --graph
+	ls = log --pretty=format:'%C(yellow)%h%C(reset)%<|(23) %C(green)%ar%C(reset)%<|(37) %C(blue)%an%C(reset) %s%C(red)%d%C(reset)' -13
+	lg = log --pretty=format:'%C(yellow)%h%C(reset)%n[%C(green)a: %ar%C(reset)] %C(blue)%an%C(reset) - %s' -E -i --grep
 	loc = log --branches --not --remotes
 	s = status -sb
 
