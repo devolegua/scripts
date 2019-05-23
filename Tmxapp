@@ -6,21 +6,22 @@ echo "create tmux session: $SESSION"
 
 tmux -2 new-session -d -s $SESSION -c $PWD -n 'root'
 
-tmux split-window -t $SESSION:0 -c $PWD -h
-tmux select-pane -t $SESSION:0.0
+#tmux split-window -t $SESSION:0 -c $PWD -h
+#tmux select-pane -t $SESSION:0.0
 
-tmux new-window -t $SESSION -c $PWD -n 'run/logs'
-tmux split-window -t $SESSION:1 -c $PWD -h
-tmux select-pane -t $SESSION:1.0
 tmux new-window -t $SESSION -c $PWD -n 'front'
 tmux new-window -t $SESSION -c $PWD -n 'back'
 
-for i in `seq 4 9`; do
+for i in `seq 3 8`; do
   tmux new-window -t $SESSION -c $PWD
 # tmux split-window -t $SESSION:$i -c $PWD -h
 # tmux select-pane -t $SESSION:$i.0
   sleep 0.2
 done
+
+tmux new-window -t $SESSION -c $PWD -n 'log: back/front'
+tmux split-window -t $SESSION:9 -c $PWD -h
+tmux select-pane -t $SESSION:9.0
 
 tmux select-window -t $SESSION:0
 
