@@ -1,6 +1,8 @@
 #!/bin/bash
 
-SESSION=`basename $PWD`
+if (test -z $SESSION); then
+  SESSION=`basename $PWD`
+fi
 
 echo "create tmux session: $SESSION"
 
