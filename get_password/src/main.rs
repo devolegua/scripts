@@ -1,13 +1,10 @@
-#![feature(string_retain)]
-
-extern crate crypto;
 extern crate base64;
+extern crate crypto;
 
 //use std::process::{Command, Stdio};
-use std::io::{self, Write};
-use crypto::sha1::Sha1;
 use crypto::digest::Digest;
-
+use crypto::sha1::Sha1;
+use std::io::{self, Write};
 
 fn main() {
     let data = std::env::args().nth(1).expect("You need pass command arg");
@@ -16,18 +13,18 @@ fn main() {
     //    .read_to_string(&mut data)
     //    .expect("can't read to string");
 
-    let mut s1 = Sha1::new();
-    s1.input_str(&data);
-    let size = s1.output_bytes();
-    
+    let mut sha1 = Sha1::new();
+    sha1.input_str(&data);
+    let size = sha1.output_bytes();
+
     let mut vec = Vec::with_capacity(size);
     vec.resize(20, 0);
     let mut bytes = vec.into_boxed_slice();
-    s1.result(&mut bytes);
+    sha1.result(&mut bytes);
 
     let mut result = base64::encode(&bytes);
 
-    result.retain(|ch| ch != '+' && ch != '\\' && ch != '=');
+    result.retain(|ch| ch != '+' && ch != '\\' && ch != '/' && ch != '=');
     result.truncate(16);
 
     io::stdout()

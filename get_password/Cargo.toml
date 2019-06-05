@@ -1,5 +1,5 @@
 [package]
-name = "scripts"
+name = "get_password"
 version = "0.1.0"
 authors = ["Oleg Tsyba <oleg.tsyba.ua@gmail.com>"]
 
