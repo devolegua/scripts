@@ -1,16 +1,21 @@
 #!/bin/bash
 
-SESSION='A'
+if (test -z $SESSION); then
+  SESSION=`basename $PWD`
+fi
+if (test $PWD = $HOME); then
+  SESSION='A'
+fi
 
-tmux -2 new-session -d -s $SESSION -c ~
+tmux -2 new-session -d -s $SESSION -c $PWD
 #tmux split-window -t $SESSION:0 -c ~ -h
 #tmux select-pane -t $SESSION:0.0
 
-for i in `seq 1 9`; do
+for i in `seq 1 19`; do
   tmux new-window -t $SESSION -c ~
 # tmux split-window -t $SESSION:$i -c ~ -h
 # tmux select-pane -t $SESSION:$i.0
-  sleep 0.2
+  sleep 0.1
 done
 
 tmux select-window -t $SESSION:0
