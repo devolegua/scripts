@@ -11,8 +11,8 @@ tmux -2 new-session -d -s $SESSION -c $PWD
 #tmux split-window -t $SESSION:0 -c ~ -h
 #tmux select-pane -t $SESSION:0.0
 
-for i in `seq 1 19`; do
-  tmux new-window -t $SESSION -c ~
+for i in `seq 1 9`; do
+  tmux new-window -t $SESSION -c $PWD
 # tmux split-window -t $SESSION:$i -c ~ -h
 # tmux select-pane -t $SESSION:$i.0
   sleep 0.1
