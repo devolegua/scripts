@@ -13,7 +13,6 @@ alias t2="exa --group-directories-first -lb --git --git-ignore -TL 2"
 alias t3="exa --group-directories-first -lb --git --git-ignore -TL 3"
 
 alias pal='pal -c 10'
-alias ncal='ncal -M3'
 
 alias info='info --vi-keys'
 
