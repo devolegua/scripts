@@ -31,7 +31,7 @@ shopt -s globstar
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\n\[\e[34m\]\u@\h \[\e[93m\]\w \[\e[32m\]\$(parse_git_branch) \[\e[90m\][\t] \n>\n>  \[\e[39m\]"
+export PS1="\n\[\e[34m\]\u@\h \[\e[93m\]\w $(parse_git_branch) \[\e[90m\][\t] \n>\n>  \[\e[39m\]"
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
