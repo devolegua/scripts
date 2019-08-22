@@ -45,7 +45,7 @@ alias packs='sudo dpkg-query -l'
 
 #unzip -j file.zip -d directory
 
-alias alsamixer='alsamixer -V all -c 0'
+alias alsamixer='alsamixer -V all'
 
 alias objdump='objdump -w -M intel'
 alias readelf='readelf -W'
